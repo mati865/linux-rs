@@ -4,7 +4,7 @@ version = "0.1.0"
 authors = ["Gonzalo Brito Gadeschi <gonzalobg88@gmail.com>"]
 build = "build.rs"
 
-[dependencies.linux]
+[dependencies.linux-rs]
 path = ".."
 default-features = false
 
