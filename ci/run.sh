@@ -93,6 +93,3 @@ cargo test -vv $opt --no-default-features --manifest-path linux-test/Cargo.toml 
       --target "${TARGET}"
 
 cargo test -vv $opt --manifest-path linux-test/Cargo.toml --target "${TARGET}"
-
-cargo test -vv $opt --features extra_traits --manifest-path linux-test/Cargo.toml \
-      --target "${TARGET}"
