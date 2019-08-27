@@ -53,16 +53,6 @@ test_target() {
     if [ "$NO_STD" != "1" ]; then
         "$CARGO" "+${RUST}" build -vv $opt --target "${TARGET}"
     fi
-
-    # Test that libc builds with the `extra_traits` feature
-    "$CARGO" "+${RUST}" build -vv $opt --no-default-features --target "${TARGET}" \
-          --features extra_traits
-
-    # Also test that it builds with `extra_traits` and default features:
-    if [ "$NO_STD" != "1" ]; then
-        "$CARGO" "+${RUST}" build -vv $opt --target "${TARGET}" \
-              --features extra_traits
-    fi
 }
 
 RUST_LINUX_TARGETS="\
