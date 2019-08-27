@@ -40,10 +40,8 @@ while read -r target; do
     rustup target add "${target}" || true
 
     # If cargo doc fails, then try xargo:
-    if ! cargo doc --target "${target}" \
-             --no-default-features  --features extra_traits ; then
-        xargo doc --target "${target}" \
-              --no-default-features  --features extra_traits
+    if ! cargo doc --target "${target}" --no-default-features ; then
+        xargo doc --target "${target}" --no-default-features
     fi
 
     cp -r "target/${target}/doc" "${TARGET_DOC_DIR}/${target}"
