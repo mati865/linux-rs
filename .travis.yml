@@ -68,8 +68,7 @@ matrix:
 
 install: travis_retry rustup target add $TARGET
 script:
-  - cargo generate-lockfile
-  - cargo generate-lockfile --manifest-path libc-test/Cargo.toml
+  - cargo generate-lockfile --manifest-path linux-test/Cargo.toml
   - if [[ $TRAVIS_OS_NAME = "linux" ]] && [[ $BUILD_ONLY != "1" ]]; then
       sh ci/run-docker.sh $TARGET;
     else
