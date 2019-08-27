@@ -51,7 +51,7 @@ fn test_linux(target: &str) {
         // "asm/termbits.h",
         "linux/dccp.h",
         "linux/falloc.h",
-        "linux/fcntl.h"
+        "linux/fcntl.h",
         "linux/fs.h",
         "linux/futex.h",
         "linux/genetlink.h",
@@ -89,5 +89,6 @@ fn test_linux(target: &str) {
 
     cfg.generate("../src/lib.rs", "main.rs");
 
-    test_linux_like_apis(target);
+    // It has no use yet
+    //test_linux_like_apis(target);
 }
