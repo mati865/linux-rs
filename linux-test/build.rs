@@ -36,12 +36,12 @@ macro_rules! headers {
 fn test_linux(target: &str) {
     assert!(target.contains("linux"));
 
-    let arm = target.contains("arm");
-    let x86_64 = target.contains("x86_64");
-    let x86_32 = target.contains("i686");
-    let x32 = target.contains("x32");
-    let mips = target.contains("mips");
-    let sparc64 = target.contains("sparc64");
+//     let arm = target.contains("arm");
+//     let x86_64 = target.contains("x86_64");
+//     let x86_32 = target.contains("i686");
+//     let x32 = target.contains("x32");
+//     let mips = target.contains("mips");
+//     let sparc64 = target.contains("sparc64");
 
     let mut cfg = ctest::TestGenerator::new();
 
